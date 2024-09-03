@@ -61,7 +61,8 @@ func TestConfigParser(t *testing.T) {
 		config.MetricScrapingPeriodSeconds != 15 ||
 		config.AutoscalingMetric != "concurrency" ||
 		config.GRPCConnectionTimeoutSeconds != 15 ||
-		config.GRPCFunctionTimeoutSeconds != 900 {
+		config.GRPCFunctionTimeoutSeconds != 900 || 
+		config.YAMLSpecificationPath != "myTestPath" {
 
 		t.Error("Unexpected configuration read.")
 	}
